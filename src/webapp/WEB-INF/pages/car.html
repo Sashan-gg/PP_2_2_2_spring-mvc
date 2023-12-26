@@ -3,13 +3,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Cars</title>
 </head>
 <body>
-<a href="/cars">Viev car list</a>
 <div>
-    <th:block th:each="msg : ${messages}">
-        <h1 th:text="${msg}"></h1>
+    <th:block th:each="car : ${cars}">
+        <h1 th:text="${car.getModel()}"></h1>
+        <h2 th:text="${car.getSerial()}"></h2>
+        <h3 th:text="${car.getNumber()}"></h3>
     </th:block>
 </div>
 </body>
